@@ -167,12 +167,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1da2fd5e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/index.vue?vue&type=template&id=58d0fb1e&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"message"},[_vm._v(_vm._s(_vm.message))]),_c('div',{staticClass:"count text-purple-100"},[_vm._v(" Count: "+_vm._s(_vm.state.count)+" ")]),_c('button',{on:{"click":_vm.increment}},[_vm._v("Increment")])])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1da2fd5e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/index.vue?vue&type=template&id=1091895c&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"message"},[_vm._v(_vm._s(_vm.message))]),_c('div',{staticClass:"count text-purple-500"},[_vm._v(" Count: "+_vm._s(_vm.state.count)+" ")]),_c('button',{staticClass:"bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded",on:{"click":_vm.increment}},[_vm._v("Increment")])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/button/index.vue?vue&type=template&id=58d0fb1e&
+// CONCATENATED MODULE: ./src/components/button/index.vue?vue&type=template&id=1091895c&
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
@@ -1229,6 +1229,23 @@ if (currentVue && typeof window !== 'undefined' && window.Vue) {
 /* harmony default export */ var vue_composition_api_module = (vue_composition_api_module_plugin);
 
 
+// CONCATENATED MODULE: ./src/components/button/useCount.js
+
+function useCount(initNum, initMessage) {
+  const state = reactive({
+    count: initNum
+  });
+
+  const increment = () => {
+    state.count += 1;
+  };
+
+  return {
+    state,
+    increment,
+    uppercaseMessage: computed(() => initMessage.toUpperCase())
+  };
+}
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/index.vue?vue&type=script&lang=js&
 //
 //
@@ -1239,6 +1256,7 @@ if (currentVue && typeof window !== 'undefined' && window.Vue) {
 //
 //
 //
+//import {computed, reactive} from "@vue/composition-api";
 
 /* harmony default export */ var buttonvue_type_script_lang_js_ = ({
   props: {
@@ -1248,18 +1266,28 @@ if (currentVue && typeof window !== 'undefined' && window.Vue) {
   },
 
   setup(props) {
-    const state = reactive({
-      count: 0
-    });
-
-    const increment = () => {
-      state.count += 1;
-    };
+    const {
+      state,
+      increment,
+      uppercaseMessage
+    } = useCount(0, props.message); // const state = reactive({
+    //     count: 0
+    // })
+    //
+    // const increment = () => {
+    //     state.count += 1
+    // }
+    //
+    // return {
+    //     state,
+    //     increment,
+    //     uppercasedMessage: computed(() => props.message.toUpperCase())
+    // }
 
     return {
       state,
       increment,
-      uppercasedMessage: computed(() => props.message.toUpperCase())
+      uppercaseMessage
     };
   }
 
