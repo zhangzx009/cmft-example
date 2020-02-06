@@ -1,17 +1,18 @@
 <template>
     <div>
-        <div class="message">{{message}}</div>
-        <div class="count text-purple-500">
-            Count: {{ state.count }}
-        </div>
-        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" @click="increment">Increment</button>
+        <some-button message="这个是example" :state="state" :increment="increment"></some-button>
+        <h1>this is the uppercaseMessage {{uppercaseMessage}}</h1>
     </div>
 </template>
 <script>
     //import {computed, reactive} from "@vue/composition-api";
     import useCount from "./useCount.js"
+    import buttonTemplate from './buttonTemplate'
 
     export default {
+        components: {
+            someButton: buttonTemplate
+        },
         props: {
             message: {
                 type: String
@@ -19,19 +20,6 @@
         },
         setup(props) {
             const {state, increment, uppercaseMessage} = useCount(0, props.message)
-            // const state = reactive({
-            //     count: 0
-            // })
-            //
-            // const increment = () => {
-            //     state.count += 1
-            // }
-            //
-            // return {
-            //     state,
-            //     increment,
-            //     uppercasedMessage: computed(() => props.message.toUpperCase())
-            // }
             return {state, increment, uppercaseMessage}
         }
     }
