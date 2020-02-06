@@ -4692,9 +4692,9 @@ markdown-it@^8.4.0:
     mdurl "^1.0.1"
     uc.micro "^1.0.3"
 
-marked@^0.3.6:
-  version "0.3.9"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.9.tgz#54ce6a57e720c3ac6098374ec625fcbcc97ff290"
+marked@^0.3.18:
+  version "0.3.18"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.18.tgz#3ef058cd926101849b92a7a7c15db18c7fc76b2f"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
@@ -7301,9 +7301,9 @@ void-elements@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
 
-vue-create-api@^0.2.0:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/vue-create-api/-/vue-create-api-0.2.2.tgz#60acb39f7e70932a432509293a1aa087404ec39e"
+vue-create-api@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/vue-create-api/-/vue-create-api-0.2.3.tgz#920b4e76349cf6aef692a6f743b96dc09eade5cd"
 
 vue-hot-reload-api@^2.1.0:
   version "2.2.4"
