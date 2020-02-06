@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="message">{{message}}</div>
-        <div class="count">
+        <div class="count text-purple-100">
             Count: {{ state.count }}
         </div>
         <button @click="increment">Increment</button>

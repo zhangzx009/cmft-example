@@ -3,7 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import VueCompositionApi from '@vue/composition-api'
-import ApiButton from '@api/ui'
+import ApiButton from '@cmft/ui'
+import '@cmft/ui/lib/ui.css'
 
 
 Vue.use(ApiButton)

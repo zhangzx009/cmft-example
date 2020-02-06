@@ -1,0 +1,34 @@
+@tailwind base;
+
+@font-face {
+    font-weight: normal;
+    font-family: 'SourceHanSans Regular';
+    font-stretch: normal;
+    font-display: auto;
+    src: url("../../assets/fonts/Source Han Sans CN Regular.ttf") format('truetype'),
+    url("../../assets/fonts/Source Han Sans CN Regular.woff2") format('woff2'),
+    url("../../assets/fonts/Source Han Sans CN Regular.woff") format('woff');
+}
+
+@font-face {
+    font-weight: normal;
+    font-family: 'SourceHanSans Medium';
+    font-stretch: normal;
+    font-display: auto;
+    src: url("../../assets/fonts/SourceHanSansCN-Medium-Alphabetic.ttf") format('truetype'),
+    url("../../assets/fonts/SourceHanSansCN-Medium-Alphabetic.woff2") format('woff2'),
+    url("../../assets/fonts/SourceHanSansCN-Medium-Alphabetic.woff") format('woff');
+}
+
+html {
+    font-family: "SourceHanSans Regular";
+}
+
+h1, h2, h3, h4, h5, h6, blod {
+    font-family: "SourceHanSans Medium";
+}
+
+
+@tailwind components;
+
+@tailwind utilities;

@@ -1,6 +1,6 @@
 import ApiButton from "./components/button/index.vue";
 import VueCompositionApi from '@vue/composition-api'
-
+import './style/index.css'
 
 /*
 *   Api vue with the composition api poc
