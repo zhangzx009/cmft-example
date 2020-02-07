@@ -13,7 +13,7 @@
         },
         setup(props) {
             const {state, increment, uppercaseMessage} = useCount(0, props.message)
-            return {state, increment, uppercaseMessage}
+             return {state, increment, uppercaseMessage}
         },
 
         render() {

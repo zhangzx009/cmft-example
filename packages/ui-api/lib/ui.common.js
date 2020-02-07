@@ -167,7 +167,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4b7c92c1-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/index.vue?vue&type=template&id=399bdea9&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0335a2c2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/index.vue?vue&type=template&id=399bdea9&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('Provider',{attrs:{"message":"this the provider"},scopedSlots:_vm._u([{key:"default",fn:function(ref){
 var result = ref.result;
 var upMessage = ref.upMessage;
@@ -1403,7 +1403,7 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var Provider = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4b7c92c1-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/buttonTemplate.vue?vue&type=template&id=5508b3dc&functional=true&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0335a2c2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/buttonTemplate.vue?vue&type=template&id=5508b3dc&functional=true&
 var buttonTemplatevue_type_template_id_5508b3dc_functional_true_render = function (_h,_vm) {var _c=_vm._c;return _c('div',[_c('div',{staticClass:"message"},[_vm._v(_vm._s(_vm.props.message))]),_c('div',{staticClass:"count text-purple-500"},[_vm._v(" Count: "+_vm._s(_vm.props.state.count)+" ")]),_c('button',{staticClass:"bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded",on:{"click":_vm.props.increment}},[_vm._v("Increment")])])}
 var buttonTemplatevue_type_template_id_5508b3dc_functional_true_staticRenderFns = []
 
