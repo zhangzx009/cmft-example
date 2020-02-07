@@ -167,12 +167,16 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"065f786c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/index.vue?vue&type=template&id=f217fd5a&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('some-button',{attrs:{"message":"这个是example","state":_vm.state,"increment":_vm.increment}}),_c('h1',[_vm._v("this is the uppercaseMessage "+_vm._s(_vm.uppercaseMessage))])],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4b7c92c1-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/index.vue?vue&type=template&id=399bdea9&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('Provider',{attrs:{"message":"this the provider"},scopedSlots:_vm._u([{key:"default",fn:function(ref){
+var result = ref.result;
+var upMessage = ref.upMessage;
+var increment = ref.increment;
+return _c('div',{},[_c('some-button',{attrs:{"message":"这个是example","state":result,"increment":increment}}),_c('h1',[_vm._v("this is the uppercaseMessage "+_vm._s(upMessage))])],1)}}])})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/button/index.vue?vue&type=template&id=f217fd5a&
+// CONCATENATED MODULE: ./src/components/button/index.vue?vue&type=template&id=399bdea9&
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
@@ -1248,13 +1252,42 @@ function useCount(initNum, initMessage) {
     })
   };
 }
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"065f786c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/buttonTemplate.vue?vue&type=template&id=5508b3dc&functional=true&
-var buttonTemplatevue_type_template_id_5508b3dc_functional_true_render = function (_h,_vm) {var _c=_vm._c;return _c('div',[_c('div',{staticClass:"message"},[_vm._v(_vm._s(_vm.props.message))]),_c('div',{staticClass:"count text-purple-500"},[_vm._v(" Count: "+_vm._s(_vm.props.state.count)+" ")]),_c('button',{staticClass:"bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded",on:{"click":_vm.props.increment}},[_vm._v("Increment")])])}
-var buttonTemplatevue_type_template_id_5508b3dc_functional_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/Provider.vue?vue&type=script&lang=js&
 
+/*
+*    Provider logic tier
+*
+*
+* */
 
-// CONCATENATED MODULE: ./src/components/button/buttonTemplate.vue?vue&type=template&id=5508b3dc&functional=true&
+/* harmony default export */ var Providervue_type_script_lang_js_ = ({
+  props: {
+    message: {
+      type: String
+    }
+  },
+  setup: function setup(props) {
+    var _useCount = useCount(0, props.message),
+        state = _useCount.state,
+        increment = _useCount.increment,
+        uppercaseMessage = _useCount.uppercaseMessage;
 
+    return {
+      state: state,
+      increment: increment,
+      uppercaseMessage: uppercaseMessage
+    };
+  },
+  render: function render() {
+    return this.$scopedSlots["default"]({
+      result: this.state,
+      upMessage: this.uppercaseMessage,
+      increment: this.increment
+    });
+  }
+});
+// CONCATENATED MODULE: ./src/components/button/Provider.vue?vue&type=script&lang=js&
+ /* harmony default export */ var button_Providervue_type_script_lang_js_ = (Providervue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -1350,6 +1383,33 @@ function normalizeComponent (
   }
 }
 
+// CONCATENATED MODULE: ./src/components/button/Provider.vue
+var Provider_render, Provider_staticRenderFns
+
+
+
+
+/* normalize component */
+
+var component = normalizeComponent(
+  button_Providervue_type_script_lang_js_,
+  Provider_render,
+  Provider_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Provider = (component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4b7c92c1-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/buttonTemplate.vue?vue&type=template&id=5508b3dc&functional=true&
+var buttonTemplatevue_type_template_id_5508b3dc_functional_true_render = function (_h,_vm) {var _c=_vm._c;return _c('div',[_c('div',{staticClass:"message"},[_vm._v(_vm._s(_vm.props.message))]),_c('div',{staticClass:"count text-purple-500"},[_vm._v(" Count: "+_vm._s(_vm.props.state.count)+" ")]),_c('button',{staticClass:"bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded",on:{"click":_vm.props.increment}},[_vm._v("Increment")])])}
+var buttonTemplatevue_type_template_id_5508b3dc_functional_true_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/button/buttonTemplate.vue?vue&type=template&id=5508b3dc&functional=true&
+
 // CONCATENATED MODULE: ./src/components/button/buttonTemplate.vue
 
 var script = {}
@@ -1357,7 +1417,7 @@ var script = {}
 
 /* normalize component */
 
-var component = normalizeComponent(
+var buttonTemplate_component = normalizeComponent(
   script,
   buttonTemplatevue_type_template_id_5508b3dc_functional_true_render,
   buttonTemplatevue_type_template_id_5508b3dc_functional_true_staticRenderFns,
@@ -1368,7 +1428,7 @@ var component = normalizeComponent(
   
 )
 
-/* harmony default export */ var buttonTemplate = (component.exports);
+/* harmony default export */ var buttonTemplate = (buttonTemplate_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/index.vue?vue&type=script&lang=js&
 //
 //
@@ -1376,29 +1436,20 @@ var component = normalizeComponent(
 //
 //
 //
-//import {computed, reactive} from "@vue/composition-api";
+//
+//
+//
 
+
+/*  3Party style wrapper
+*
+*
+* */
 
 /* harmony default export */ var buttonvue_type_script_lang_js_ = ({
   components: {
+    Provider: Provider,
     someButton: buttonTemplate
-  },
-  props: {
-    message: {
-      type: String
-    }
-  },
-  setup: function setup(props) {
-    var _useCount = useCount(0, props.message),
-        state = _useCount.state,
-        increment = _useCount.increment,
-        uppercaseMessage = _useCount.uppercaseMessage;
-
-    return {
-      state: state,
-      increment: increment,
-      uppercaseMessage: uppercaseMessage
-    };
   }
 });
 // CONCATENATED MODULE: ./src/components/button/index.vue?vue&type=script&lang=js&

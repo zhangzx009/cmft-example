@@ -1,28 +1,25 @@
 <template>
-    <div>
-        <some-button message="这个是example" :state="state" :increment="increment"></some-button>
-        <h1>this is the uppercaseMessage {{uppercaseMessage}}</h1>
-    </div>
+    <Provider message="this the provider">
+        <div slot-scope="{ result, upMessage, increment }">
+            <some-button message="这个是example" :state="result" :increment="increment"></some-button>
+            <h1>this is the uppercaseMessage {{upMessage}}</h1>
+        </div>
+    </Provider>
 </template>
+
 <script>
-    //import {computed, reactive} from "@vue/composition-api";
-    import useCount from "./useCount.js"
+    import Provider from "./Provider";
     import buttonTemplate from './buttonTemplate'
+
+    /*  3Party style wrapper
+    *
+    *
+    * */
 
     export default {
         components: {
+            Provider: Provider,
             someButton: buttonTemplate
-        },
-        props: {
-            message: {
-                type: String
-            }
-        },
-        setup(props) {
-            const {state, increment, uppercaseMessage} = useCount(0, props.message)
-            return {state, increment, uppercaseMessage}
         }
-    }
-
-
+    };
 </script>
