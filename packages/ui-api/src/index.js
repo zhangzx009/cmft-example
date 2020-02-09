@@ -1,4 +1,6 @@
 import ApiButton from "./components/button/index.vue";
+import ApiCheckBox from "./components/checkbox/index.vue"
+
 import VueCompositionApi from '@vue/composition-api'
 import './style/index.css'
 
@@ -15,5 +17,6 @@ export default {
         // }
         Vue.use(VueCompositionApi)
         Vue.component("api-button", ApiButton);
+        Vue.component("api-checkbox", ApiCheckBox);
     }
 };

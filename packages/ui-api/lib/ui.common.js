@@ -1403,12 +1403,12 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var Provider = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0335a2c2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/buttonTemplate.vue?vue&type=template&id=5508b3dc&functional=true&
-var buttonTemplatevue_type_template_id_5508b3dc_functional_true_render = function (_h,_vm) {var _c=_vm._c;return _c('div',[_c('div',{staticClass:"message"},[_vm._v(_vm._s(_vm.props.message))]),_c('div',{staticClass:"count text-purple-500"},[_vm._v(" Count: "+_vm._s(_vm.props.state.count)+" ")]),_c('button',{staticClass:"bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded",on:{"click":_vm.props.increment}},[_vm._v("Increment")])])}
-var buttonTemplatevue_type_template_id_5508b3dc_functional_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0335a2c2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/button/buttonTemplate.vue?vue&type=template&id=bcf22dc8&functional=true&
+var buttonTemplatevue_type_template_id_bcf22dc8_functional_true_render = function (_h,_vm) {var _c=_vm._c;return _c('div',[_c('div',{staticClass:"message"},[_vm._v(_vm._s(_vm.props.message))]),_c('div',{staticClass:"count text-purple-500"},[_vm._v(" Count: "+_vm._s(_vm.props.state.count)+" ")]),_c('button',{staticClass:"bg-blue-500\n     hover:bg-blue-600\n     text-white\n     font-bold py-2 px-4 rounded",on:{"click":_vm.props.increment}},[_vm._v("Increment")])])}
+var buttonTemplatevue_type_template_id_bcf22dc8_functional_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/button/buttonTemplate.vue?vue&type=template&id=5508b3dc&functional=true&
+// CONCATENATED MODULE: ./src/components/button/buttonTemplate.vue?vue&type=template&id=bcf22dc8&functional=true&
 
 // CONCATENATED MODULE: ./src/components/button/buttonTemplate.vue
 
@@ -1419,8 +1419,8 @@ var script = {}
 
 var buttonTemplate_component = normalizeComponent(
   script,
-  buttonTemplatevue_type_template_id_5508b3dc_functional_true_render,
-  buttonTemplatevue_type_template_id_5508b3dc_functional_true_staticRenderFns,
+  buttonTemplatevue_type_template_id_bcf22dc8_functional_true_render,
+  buttonTemplatevue_type_template_id_bcf22dc8_functional_true_staticRenderFns,
   true,
   null,
   null,
@@ -1474,10 +1474,261 @@ var button_component = normalizeComponent(
 )
 
 /* harmony default export */ var components_button = (button_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0335a2c2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/checkbox/index.vue?vue&type=template&id=1e860f94&
+var checkboxvue_type_template_id_1e860f94_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('checkbox-provider',{},[_c('checkbox-template',_vm._b({},'checkbox-template',{ isSquare: _vm.isSquare,
+            _containerClass: _vm._containerClass,
+            _rightIconClass: _vm._rightIconClass,
+            _borderIconClass: _vm._borderIconClass,
+            checkValue: _vm.checkValue,
+            computedOption: _vm.computedOption,
+            isInGroup: _vm.isInGroup},false))],1)}
+var checkboxvue_type_template_id_1e860f94_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/checkbox/index.vue?vue&type=template&id=1e860f94&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/checkbox/CheckboxProvider.vue?vue&type=script&lang=js&
+
+var COMPONENT_NAME = 'api-checkbox';
+var EVENT_INPUT = 'input';
+var EVENT_CHECKED = 'checked';
+var EVENT_CANCLE_CHECKED = 'cancel-checked';
+/* harmony default export */ var CheckboxProvidervue_type_script_lang_js_ = ({
+  name: COMPONENT_NAME,
+  props: {
+    value: {
+      type: [Boolean, String]
+    },
+    label: {
+      type: [Boolean, String]
+    },
+    disabled: {
+      type: Boolean,
+      "default": false
+    },
+    option: {
+      type: [Boolean, String, Object],
+      "default": function _default() {
+        return {
+          _def_option: true
+        };
+      }
+    },
+    position: {
+      type: String,
+      "default": 'left'
+    },
+    shape: {
+      type: String,
+      "default": 'circle'
+    },
+    hollowStyle: {
+      type: Boolean,
+      "default": false
+    }
+  },
+  setup: function setup(props, context) {
+    /*
+    *  data parent
+    *  may not need parent variable
+    *
+    * */
+    var isInGroup = Boolean(context.parent._checkboxGroup);
+    var isInHorizontalGroup = isInGroup && (context.parent.horizontal || context.parent.colNum > 1);
+    console.log(context);
+    var checkValue = ref(false);
+    var computedOption = reactive({
+      label: computed(function () {
+        if (props.option._def_option === true) {
+          return props.label;
+        } else {
+          return props.option.label;
+        }
+      }),
+      value: computed(function () {
+        if (props.option._def_option === true) {
+          return props.label;
+        } else {
+          return props.option.value;
+        }
+      }),
+      disabled: computed(function () {
+        if (props.option._def_option === true) {
+          return props.disabled;
+        } else {
+          return false;
+        }
+      })
+    });
+    var changeCheck = watch(checkValue, function (newVal) {
+      var value = computedOption.value;
+      var emitValue = value && newVal ? value : newVal;
+      var parentEmitEvent = newVal ? EVENT_CHECKED : EVENT_CANCLE_CHECKED;
+      context.emit(EVENT_INPUT, emitValue);
+
+      if (isInGroup) {
+        context.parent.emit(parentEmitEvent, value || newVal);
+      }
+    });
+    /*
+    *   style section
+    *   todo: css property to handle
+    *
+    * */
+
+    var isSquare = computed(function () {
+      var checkTrue = props.shape === 'square' || props.hollowStyle;
+      return checkTrue;
+    });
+
+    var _rightIconClass = computed(function () {
+      return isSquare.value ? 'cubeic-square-border' : 'cubeic-round-border';
+    });
+
+    var _borderIconClass = computed(function () {
+      return isSquare.value ? 'cubeic-square-right' : 'cubeic-right';
+    });
+    /*
+    *    useHook method
+    *
+    * */
+
+
+    var _containerClass = reactive({
+      'cube-checkbox-hollow': props.hollowStyle,
+      'cube-checkbox_checked': checkValue,
+      'cube-checkbox_disabled': computedOption.disabled,
+      'border-right-1px': false
+    });
+
+    return {
+      isSquare: isSquare,
+      _containerClass: _containerClass,
+      _rightIconClass: _rightIconClass,
+      _borderIconClass: _borderIconClass,
+      checkValue: checkValue,
+      computedOption: computedOption,
+      isInGroup: isInGroup
+    };
+  },
+  render: function render() {
+    return this.$scopedSlots["default"]({
+      isSquare: this.isSquare,
+      _containerClass: this._containerClass,
+      _rightIconClass: this._rightIconClass,
+      _borderIconClass: this._borderIconClass,
+      checkValue: this.checkValue,
+      computedOption: this.computedOption,
+      isInGroupt: this.isInGroupt
+    });
+  }
+});
+// CONCATENATED MODULE: ./src/components/checkbox/CheckboxProvider.vue?vue&type=script&lang=js&
+ /* harmony default export */ var checkbox_CheckboxProvidervue_type_script_lang_js_ = (CheckboxProvidervue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/checkbox/CheckboxProvider.vue
+var CheckboxProvider_render, CheckboxProvider_staticRenderFns
+
+
+
+
+/* normalize component */
+
+var CheckboxProvider_component = normalizeComponent(
+  checkbox_CheckboxProvidervue_type_script_lang_js_,
+  CheckboxProvider_render,
+  CheckboxProvider_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var CheckboxProvider = (CheckboxProvider_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0335a2c2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/checkbox/CheckboxTemplate.vue?vue&type=template&id=458b83a2&
+var CheckboxTemplatevue_type_template_id_458b83a2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"demo-wrapper"},[_c('div',{staticClass:"cube-checkbox",class:_vm._containerClass,attrs:{"data-pos":_vm.position}},[_c('label',{staticClass:"cube-checkbox-wrap"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.checkValue),expression:"checkValue"}],staticClass:"cube-checkbox-input",attrs:{"type":"checkbox","disabled":_vm.computedOption.disabled},domProps:{"checked":Array.isArray(_vm.checkValue)?_vm._i(_vm.checkValue,null)>-1:(_vm.checkValue)},on:{"change":function($event){var $$a=_vm.checkValue,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.checkValue=$$a.concat([$$v]))}else{$$i>-1&&(_vm.checkValue=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.checkValue=$$c}}}}),_c('span',{staticClass:"cube-checkbox-ui",class:_vm._rightIconClass},[_c('i',{class:_vm._borderIconClass})]),_c('span',{staticClass:"cube-checkbox-label"},[_vm._t("default",[_vm._v(_vm._s(_vm.computedOption.label))])],2)])])])}
+var CheckboxTemplatevue_type_template_id_458b83a2_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/checkbox/CheckboxTemplate.vue?vue&type=template&id=458b83a2&
+
+// CONCATENATED MODULE: ./src/components/checkbox/CheckboxTemplate.vue
+
+var CheckboxTemplate_script = {}
+
+
+/* normalize component */
+
+var CheckboxTemplate_component = normalizeComponent(
+  CheckboxTemplate_script,
+  CheckboxTemplatevue_type_template_id_458b83a2_render,
+  CheckboxTemplatevue_type_template_id_458b83a2_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var CheckboxTemplate = (CheckboxTemplate_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/checkbox/index.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ var checkboxvue_type_script_lang_js_ = ({
+  name: "api-checkbox",
+  components: {
+    CheckboxProvider: CheckboxProvider,
+    CheckboxTemplate: CheckboxTemplate
+  }
+});
+// CONCATENATED MODULE: ./src/components/checkbox/index.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_checkboxvue_type_script_lang_js_ = (checkboxvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/checkbox/index.vue
+
+
+
+
+
+/* normalize component */
+
+var checkbox_component = normalizeComponent(
+  components_checkboxvue_type_script_lang_js_,
+  checkboxvue_type_template_id_1e860f94_render,
+  checkboxvue_type_template_id_1e860f94_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var components_checkbox = (checkbox_component.exports);
 // EXTERNAL MODULE: ./src/style/index.css
 var style = __webpack_require__("b29b");
 
 // CONCATENATED MODULE: ./src/index.js
+
 
 
 
@@ -1495,6 +1746,7 @@ var style = __webpack_require__("b29b");
     // }
     Vue.use(vue_composition_api_module);
     Vue.component("api-button", components_button);
+    Vue.component("api-checkbox", components_checkbox);
   }
 });
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
